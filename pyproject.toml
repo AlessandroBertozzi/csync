@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "csync"
+version = "0.1.0"
+description = "Sync Claude Code conversations to an rclone remote and pull them into any local project"
+requires-python = ">=3.11"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.scripts]
+csync = "csync:main"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["csync.py"]
